@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/tomp3.cc - No Copyright Music HORROR THEME    CREEPY  BACKGROUND MUSIC  Royalty Free Music  VIVEK ABHISHEK.mp3-3ae518b34b027ed2da5ff7556fc606f8.mp3str"
+
+[deps]
+
+source_file="res://AssetsObj/Kuyang/tomp3.cc - No Copyright Music HORROR THEME    CREEPY  BACKGROUND MUSIC  Royalty Free Music  VIVEK ABHISHEK.mp3"
+dest_files=[ "res://.import/tomp3.cc - No Copyright Music HORROR THEME    CREEPY  BACKGROUND MUSIC  Royalty Free Music  VIVEK ABHISHEK.mp3-3ae518b34b027ed2da5ff7556fc606f8.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

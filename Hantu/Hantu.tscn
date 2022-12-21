@@ -1,0 +1,111 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://Hantu/Hantu.gd" type="Script" id=1]
+[ext_resource path="res://AssetsObj/Kuyang/kuyang.glb" type="PackedScene" id=2]
+
+[sub_resource type="CapsuleShape" id=2]
+radius = 0.75
+height = 1.25
+
+[node name="Hantu" type="KinematicBody" groups=["hantu"]]
+script = ExtResource( 1 )
+
+[node name="CollisionShape" type="CollisionShape" parent="."]
+transform = Transform( 0.929, -1.56664e-10, 9.6316e-18, 0, -4.0433e-08, -1.301, 1.57341e-10, 0.925, -5.68685e-08, 0, 1.66236, 0 )
+shape = SubResource( 2 )
+
+[node name="agent" type="NavigationAgent" parent="."]
+avoidance_enabled = true
+
+[node name="kuyang" parent="." instance=ExtResource( 2 )]
+transform = Transform( -3.0598e-08, 0, -0.7, 0, 0.7, 0, 0.7, 0, -3.0598e-08, 0, 1.31249, 0 )
+
+[node name="Head" parent="kuyang" index="0"]
+transform = Transform( 1, 0, 0, 0, 1.24858, 0, 0, 0, 1, 0, 1.63831, 0 )
+
+[node name="Cylinder" parent="kuyang" index="1"]
+transform = Transform( 0, 0, 0.142897, 0, 1.01096, 0, -0.142897, 0, 0, 0, -0.315897, 0 )
+
+[node name="Hair" parent="kuyang" index="2"]
+transform = Transform( 0.813391, 0.581717, 0, -0.581717, 0.813391, 0, 0, -1.77636e-15, 1, 0, 0.693663, 0 )
+visible = false
+
+[node name="Cube" parent="kuyang" index="3"]
+transform = Transform( 0.484515, 0, 0, 0, 0.0964657, 0, 0, 0, 0.504428, -0.298764, 1.32735, -0.00637175 )
+
+[node name="Light" parent="kuyang" index="4"]
+visible = false
+
+[node name="Sphere001" parent="kuyang" index="5"]
+transform = Transform( 0.265023, 0, 2.66454e-15, 0, 0.265023, 0, -2.66454e-15, 0, 0.265023, -0.7, 2.05404, 0.355367 )
+
+[node name="Sphere002" parent="kuyang" index="6"]
+transform = Transform( 0.265023, 0, 2.66454e-15, 0, 0.265023, 0, -2.66454e-15, 0, 0.265023, -0.7, 2.05404, -0.355367 )
+
+[node name="Sphere003" parent="kuyang" index="7"]
+transform = Transform( 0.176445, 0, 0, 0, 0.176445, 0, 0, 0, 0.176445, -0.838999, 2.05404, -0.355367 )
+
+[node name="Sphere004" parent="kuyang" index="8"]
+transform = Transform( 0.178426, 0, 0, 0, 0.178426, 0, 0, 0, 0.178426, -0.838999, 2.05404, 0.355367 )
+
+[node name="Sphere" parent="kuyang" index="9"]
+transform = Transform( 0.902351, -0.0822391, -1.13242, 0.0664087, 1.11745, -0.0833403, 1.22207, -4.17409e-09, 0.84068, -0.0796266, 0.584343, 0.0766608 )
+visible = false
+
+[node name="Sphere005" parent="kuyang" index="10"]
+transform = Transform( 0.296139, 0, -1.77636e-15, 0, 0.68988, 0, -2.66454e-15, 0, 0.452776, 0.00499286, -0.373318, 0.53674 )
+
+[node name="Sphere007" parent="kuyang" index="11"]
+transform = Transform( 0.199095, 0, 1.77636e-15, 0, 0.446349, -0.128176, 0, 0.128176, 0.446349, -0.242042, -1.02417, -0.154942 )
+
+[node name="Sphere006" parent="kuyang" index="12"]
+transform = Transform( -0.296139, 0, -3.73803e-08, 0, 0.68988, 0, 2.58893e-08, 0, -0.427581, 0.00499286, -0.373318, -0.524864 )
+
+[node name="kuyang2" parent="." instance=ExtResource( 2 )]
+transform = Transform( 0.0512302, 0, 0.698123, 0, 0.7, 0, -0.698123, 0, 0.0512302, 0, 1.31249, 0 )
+
+[node name="Head" parent="kuyang2" index="0"]
+transform = Transform( 1, 0, 0, 0, 1.24858, 0, 0, 0, 1, 0, 1.63831, 0 )
+
+[node name="Cylinder" parent="kuyang2" index="1"]
+transform = Transform( 0, 0, 0.142897, 0, 1.01096, 0, -0.142897, 0, 0, 0, -0.315897, 0 )
+
+[node name="Hair" parent="kuyang2" index="2"]
+transform = Transform( 0.813391, 0.581717, 0, -0.581717, 0.813391, 0, 0, -1.77636e-15, 1, 0, 0.693663, 0 )
+visible = false
+
+[node name="Cube" parent="kuyang2" index="3"]
+transform = Transform( 0.484515, 0, -7.45058e-09, 0, 0.0964657, 0, -3.72529e-09, 0, 0.504428, -0.298764, 1.32735, -0.00637175 )
+
+[node name="Light" parent="kuyang2" index="4"]
+visible = false
+
+[node name="Sphere001" parent="kuyang2" index="5"]
+transform = Transform( 0.265023, 0, 0, 0, 0.265023, 0, 0, 0, 0.265023, -0.7, 2.05404, 0.355367 )
+
+[node name="Sphere002" parent="kuyang2" index="6"]
+transform = Transform( 0.265023, 0, 0, 0, 0.265023, 0, 0, 0, 0.265023, -0.7, 2.05404, -0.355367 )
+
+[node name="Sphere003" parent="kuyang2" index="7"]
+transform = Transform( 0.176445, 0, 0, 0, 0.176445, 0, 0, 0, 0.176445, -0.838998, 2.05404, -0.355367 )
+
+[node name="Sphere004" parent="kuyang2" index="8"]
+transform = Transform( 0.178426, 0, -1.86265e-09, 0, 0.178426, 0, 1.86265e-09, 0, 0.178426, -0.838999, 2.05404, 0.355367 )
+
+[node name="Sphere" parent="kuyang2" index="9"]
+transform = Transform( 0.902351, -0.0822391, -1.13242, 0.0664087, 1.11745, -0.0833403, 1.22207, -4.17409e-09, 0.84068, -0.0796266, 0.584343, 0.0766608 )
+visible = false
+
+[node name="Sphere005" parent="kuyang2" index="10"]
+transform = Transform( 0.296139, 0, 0, 0, 0.68988, 0, 1.86265e-09, 0, 0.452775, 0.00499286, -0.373318, 0.53674 )
+
+[node name="Sphere007" parent="kuyang2" index="11"]
+transform = Transform( 0.199095, 0, -3.72529e-09, 0, 0.446349, -0.128176, 0, 0.128176, 0.446349, -0.242042, -1.02417, -0.154942 )
+
+[node name="Sphere006" parent="kuyang2" index="12"]
+transform = Transform( -0.296139, 0, -3.72529e-08, 0, 0.68988, 0, 2.23517e-08, 0, -0.427581, 0.00499286, -0.373318, -0.524864 )
+
+[connection signal="navigation_finished" from="agent" to="." method="_on_agent_navigation_finished"]
+
+[editable path="kuyang"]
+[editable path="kuyang2"]

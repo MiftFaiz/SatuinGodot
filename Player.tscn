@@ -1,0 +1,30 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://Player.gd" type="Script" id=1]
+[ext_resource path="res://Mobil.glb" type="PackedScene" id=2]
+[ext_resource path="res://Senter.tscn" type="PackedScene" id=3]
+
+[sub_resource type="BoxShape" id=1]
+
+[node name="Player" type="KinematicBody"]
+transform = Transform( 5, 0, 0, 0, 5, 0, 0, 0, 5, -0.289619, 6.6795, 0 )
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="CollisionShape" type="CollisionShape" parent="."]
+transform = Transform( 1.232, 0, 0, 0, -6.76652e-08, -1, 0, 1.548, -4.37114e-08, 0.631055, 0.249038, -0.0318931 )
+shape = SubResource( 1 )
+
+[node name="CameraPivot" type="Spatial" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.74199, -0.204045 )
+
+[node name="Camera" type="Camera" parent="CameraPivot"]
+transform = Transform( 0.2, 0.00013409, -0.000254879, -7.51207e-05, 0.195161, 0.0437272, 0.00027803, -0.043727, 0.195161, 0.598552, 1.58047, 1.79837 )
+
+[node name="Mobil" parent="." instance=ExtResource( 2 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.496095, -0.916801, 0.284068 )
+
+[node name="senter" parent="Mobil" instance=ExtResource( 3 )]
+transform = Transform( -1.31134e-08, 0, -0.189, 0, 0.3, 0, 0.3, 0, -8.26145e-09, 0.270388, 0.880827, -1.28675 )
