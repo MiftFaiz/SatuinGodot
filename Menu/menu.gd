@@ -20,3 +20,13 @@ func _ready():
 func _on_Play_pressed():
 	get_tree().change_scene("res://Cerita/cerita.tscn")
 	pass # Replace with function body.
+
+
+func _on_Keluar_pressed():
+	get_tree().quit()
+	pass # Replace with function body.
+
+
+func _on_About_pressed():
+	get_tree().change_scene("res://About/About.tscn")
+	pass # Replace with function body.

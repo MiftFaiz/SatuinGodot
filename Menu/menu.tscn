@@ -19,9 +19,9 @@ texture = ExtResource( 1 )
 
 [node name="Play" type="Button" parent="."]
 margin_left = 390.0
-margin_top = 305.0
+margin_top = 213.0
 margin_right = 660.0
-margin_bottom = 377.0
+margin_bottom = 285.0
 rect_pivot_offset = Vector2( -885, -193 )
 custom_fonts/font = SubResource( 1 )
 text = "Play"
@@ -29,12 +29,22 @@ flat = true
 
 [node name="About" type="Button" parent="."]
 margin_left = 390.0
-margin_top = 405.0
+margin_top = 313.0
 margin_right = 660.0
-margin_bottom = 477.0
+margin_bottom = 385.0
 rect_pivot_offset = Vector2( -885, -193 )
 custom_fonts/font = SubResource( 1 )
 text = "About"
+flat = true
+
+[node name="Keluar" type="Button" parent="."]
+margin_left = 390.0
+margin_top = 402.0
+margin_right = 660.0
+margin_bottom = 474.0
+rect_pivot_offset = Vector2( -885, -193 )
+custom_fonts/font = SubResource( 1 )
+text = "Keluar"
 flat = true
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
@@ -42,3 +52,5 @@ stream = ExtResource( 4 )
 autoplay = true
 
 [connection signal="pressed" from="Play" to="." method="_on_Play_pressed"]
+[connection signal="pressed" from="About" to="." method="_on_About_pressed"]
+[connection signal="pressed" from="Keluar" to="." method="_on_Keluar_pressed"]
