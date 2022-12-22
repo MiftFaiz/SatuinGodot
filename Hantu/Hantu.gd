@@ -1,4 +1,5 @@
 extends KinematicBody
+class_name hantu
 
 onready var agent : NavigationAgent = $agent
 export var speed = 3.0

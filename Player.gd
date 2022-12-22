@@ -14,8 +14,11 @@ const MAX_SLOPE_ANGLE = 40
 var camera
 var rotation_helper
 var status_light = 1
+var status_on = 0
 
 var MOUSE_SENSITIVITY = 0.05
+
+onready var hitbox = $Mobil/Hitbox
 
 func _ready():
 	camera = $CameraPivot/Camera
@@ -46,12 +49,19 @@ func process_input(delta):
 		input_movement_vector.x += 1
 		
 	if Input.is_action_just_pressed("l") && status_light == 1:
+		status_on = 1
 #	if Input.is_action_just_pressed("l"):
 		get_node("Mobil/senter").visible = true
-		status_light = 0
+#		status_light = 0
+#		for body in hitbox.get_overlapping_bodies():
+#			if body.is_in_group("Hantu"):
+##				get_parent().get_node("")
+#				print(get_parent().get_node("Hantu").visible)
+#				print("oke")
 	if Input.is_action_just_released("l"):
 		yield(get_tree().create_timer(3),"timeout")
-		get_node("Mobil/senter").visible = false
+#		get_node("Mobil/senter").visible = false
+		status_light = 0
 		
 	input_movement_vector = input_movement_vector.normalized()
 
@@ -108,3 +118,17 @@ func _on_batre_body_entered(body):
 	status_light = 1
 	pass # Replace with function body.
 
+
+func _on_Hitbox_body_entered(body):
+	if status_light == 1 && status_on == 1:
+#		print(get_node("Mobil/senter").visible)
+		if body is hantu:
+			get_parent().get_node("Hantu").queue_free()
+			print("kena")
+	pass # Replace with function body.
+
+
+func _on_Hitbody_body_entered(body):
+	if body is hantu:
+		get_tree().change_scene("res://Menu/Die.tscn")
+	pass # Replace with function body.

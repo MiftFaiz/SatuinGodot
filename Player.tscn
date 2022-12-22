@@ -1,10 +1,16 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=7 format=2]
 
 [ext_resource path="res://Player.gd" type="Script" id=1]
 [ext_resource path="res://Mobil.glb" type="PackedScene" id=2]
 [ext_resource path="res://Senter.tscn" type="PackedScene" id=3]
 
 [sub_resource type="BoxShape" id=1]
+
+[sub_resource type="BoxShape" id=2]
+extents = Vector3( 1, 1, 0.872061 )
+
+[sub_resource type="BoxShape" id=3]
+extents = Vector3( 1, 1, 1.73005 )
 
 [node name="Player" type="KinematicBody"]
 transform = Transform( 5, 0, 0, 0, 5, 0, 0, 0, 5, -0.289619, 6.6795, 0 )
@@ -28,3 +34,22 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.496095, -0.916801, 0.284068 
 
 [node name="senter" parent="Mobil" instance=ExtResource( 3 )]
 transform = Transform( -1.31134e-08, 0, -0.189, 0, 0.3, 0, 0.3, 0, -8.26145e-09, 0.270388, 0.880827, -1.28675 )
+
+[node name="OmniLight" type="OmniLight" parent="Mobil"]
+transform = Transform( 0.2, 0, 0, 0, 0.2, 0, 0, 0, 0.2, 0, 0.620946, -2.53134 )
+light_energy = 5.0
+
+[node name="Hitbox" type="Area" parent="Mobil"]
+
+[node name="CollisionShape" type="CollisionShape" parent="Mobil/Hitbox"]
+transform = Transform( 1.37817, 0, 0, 0, 0.67812, 0, 0, 0, 2.14904, 0.184916, 0.879459, -2.55504 )
+shape = SubResource( 2 )
+
+[node name="Hitbody" type="Area" parent="."]
+
+[node name="CollisionShape" type="CollisionShape" parent="Hitbody"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.0217674 )
+shape = SubResource( 3 )
+
+[connection signal="body_entered" from="Mobil/Hitbox" to="." method="_on_Hitbox_body_entered"]
+[connection signal="body_entered" from="Hitbody" to="." method="_on_Hitbody_body_entered"]

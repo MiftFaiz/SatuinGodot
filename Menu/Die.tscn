@@ -1,0 +1,11 @@
+[gd_scene format=2]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="Label" type="Label" parent="."]
+margin_left = 404.0
+margin_top = 248.0
+margin_right = 453.0
+margin_bottom = 262.0
+rect_scale = Vector2( 5, 5 )
+text = "You Die"
