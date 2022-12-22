@@ -60,7 +60,7 @@ func process_input(delta):
 #				print("oke")
 	if Input.is_action_just_released("l"):
 		yield(get_tree().create_timer(3),"timeout")
-#		get_node("Mobil/senter").visible = false
+		get_node("Mobil/senter").visible = false
 		status_light = 0
 		
 	input_movement_vector = input_movement_vector.normalized()
@@ -130,5 +130,20 @@ func _on_Hitbox_body_entered(body):
 
 func _on_Hitbody_body_entered(body):
 	if body is hantu:
-		get_tree().change_scene("res://Menu/Die.tscn")
+#		get_tree().change_scene("res://Menu/Die.tscn")
+#		LifeCounter.lives -= 1
+		print("Kena")
 	pass # Replace with function body.
+
+
+#func _on_Hitbody2_body_entered(body):
+#	if body is hantu:
+##		get_tree().change_scene("res://Menu/Die.tscn")
+#		LifeCounter.lives -= 1
+#	pass # Replace with function body.
+#
+#func _on_Hitbody3_body_entered(body):
+#	if body is hantu:
+##		get_tree().change_scene("res://Menu/Die.tscn")
+#		LifeCounter.lives -= 1
+#	pass # Replace with function body.

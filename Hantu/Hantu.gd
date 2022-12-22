@@ -24,10 +24,9 @@ func _physics_process(delta):
 
 
 
-
-
-
-
 func _on_agent_navigation_finished():
+	LifeCounter.lives -= 1
 	print("Mati")
 	pass # Replace with function body.
+
+#

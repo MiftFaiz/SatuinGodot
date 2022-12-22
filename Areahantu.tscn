@@ -1,0 +1,16 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://Scene/AreaNyawa.gd" type="Script" id=1]
+
+[sub_resource type="CapsuleShape" id=43]
+radius = 0.767998
+height = 2.41987
+
+[node name="Area" type="Area"]
+script = ExtResource( 1 )
+
+[node name="CollisionShape" type="CollisionShape" parent="."]
+transform = Transform( 1, 4.37084e-08, 4.32017e-08, -4.37084e-08, 0.0116586, 0.999932, 4.32017e-08, -0.999932, 0.0116586, 0, 1.40235, -0.0162048 )
+shape = SubResource( 43 )
+
+[connection signal="body_entered" from="." to="." method="_on_Area_body_entered"]

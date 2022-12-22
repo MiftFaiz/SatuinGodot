@@ -1,0 +1,33 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://AssetsObj/Nyawa/Nyawa.gd" type="Script" id=1]
+[ext_resource path="res://AssetsObj/Nyawa/nyawa.png" type="Texture" id=2]
+
+[node name="Nyawa" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 1 )
+
+[node name="Nyawa1" type="TextureRect" parent="."]
+margin_left = 12.0
+margin_top = 15.0
+margin_right = 1212.0
+margin_bottom = 1112.0
+rect_scale = Vector2( 0.03, 0.03 )
+texture = ExtResource( 2 )
+
+[node name="Nyawa2" type="TextureRect" parent="."]
+margin_left = 60.0
+margin_top = 15.0
+margin_right = 1260.0
+margin_bottom = 1112.0
+rect_scale = Vector2( 0.03, 0.03 )
+texture = ExtResource( 2 )
+
+[node name="Nyawa3" type="TextureRect" parent="."]
+margin_left = 108.0
+margin_top = 15.0
+margin_right = 1308.0
+margin_bottom = 1112.0
+rect_scale = Vector2( 0.03, 0.03 )
+texture = ExtResource( 2 )
