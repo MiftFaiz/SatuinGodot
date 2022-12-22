@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/Win Level Sound Effect.mp3-e0a0ff00b1d6bbdd5da56d1a9fdcd28e.mp3str"
+
+[deps]
+
+source_file="res://Win Level Sound Effect.mp3"
+dest_files=[ "res://.import/Win Level Sound Effect.mp3-e0a0ff00b1d6bbdd5da56d1a9fdcd28e.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

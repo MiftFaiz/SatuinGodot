@@ -7,7 +7,7 @@ var test = 1
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	get_node("portal").visible = false
+	get_node("portal").visible = true
 	pass # Replace with function body.
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
@@ -18,5 +18,5 @@ func _ready():
 
 func _on_portal_body_entered(body):
 	if body is Player:
-		get_tree().change_scene("res://Map/Level.tscn")
+		get_tree().change_scene("res://Menu/Win.tscn")
 	pass # Replace with function body.

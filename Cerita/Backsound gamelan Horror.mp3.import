@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/Backsound gamelan Horror.mp3-c4ef09d157b57ea4cb70eda2fe065306.mp3str"
+
+[deps]
+
+source_file="res://Cerita/Backsound gamelan Horror.mp3"
+dest_files=[ "res://.import/Backsound gamelan Horror.mp3-c4ef09d157b57ea4cb70eda2fe065306.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

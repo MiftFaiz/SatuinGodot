@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/Intro Backsound.mp3-da6f5d62c155570aea01ee315d0a9434.mp3str"
+
+[deps]
+
+source_file="res://Cerita/Intro Backsound.mp3"
+dest_files=[ "res://.import/Intro Backsound.mp3-da6f5d62c155570aea01ee315d0a9434.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

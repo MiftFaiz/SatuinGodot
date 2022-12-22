@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/Horror Backsound.mp3-0362c5c02225bb6d176bf0ce3c7a97fe.mp3str"
+
+[deps]
+
+source_file="res://Horror Backsound.mp3"
+dest_files=[ "res://.import/Horror Backsound.mp3-0362c5c02225bb6d176bf0ce3c7a97fe.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

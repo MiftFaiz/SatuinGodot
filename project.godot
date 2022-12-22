@@ -57,7 +57,7 @@ _global_script_class_icons={
 [application]
 
 config/name="GhostDriver Miftah"
-run/main_scene="res://Map/Level.tscn"
+run/main_scene="res://Menu/menu.tscn"
 config/icon="res://icon.png"
 
 [autoload]

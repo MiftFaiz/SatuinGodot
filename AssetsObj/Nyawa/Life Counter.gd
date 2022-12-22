@@ -1,4 +1,4 @@
 extends Node
 
 var lives = 3
-var collectedKey = 0
+var score = 1200

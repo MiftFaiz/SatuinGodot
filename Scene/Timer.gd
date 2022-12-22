@@ -16,4 +16,5 @@ func _process(delta):
 
 func _on_Timer_timeout():
 	second -= 1
+	LifeCounter.score -= 4
 	pass 

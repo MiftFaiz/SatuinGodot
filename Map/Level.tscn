@@ -138,6 +138,8 @@ environment = SubResource( 3 )
 [node name="RichTextLabel" parent="." instance=ExtResource( 7 )]
 
 [node name="portal" parent="." instance=ExtResource( 9 )]
-transform = Transform( -4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -13.8496, 0.0656548, -3.09011 )
+transform = Transform( -4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -13.45, -0.431653, -3.51015 )
+
+[connection signal="body_entered" from="portal" to="portal" method="_on_portal_body_entered"]
 
 [editable path="NavigationMeshInstance/Player"]
